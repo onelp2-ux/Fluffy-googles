@@ -1055,6 +1055,9 @@ if __name__ == "__main__":
     here = os.path.dirname(os.path.abspath(__file__))
     xlsx = build_excel(os.path.join(here, "helix-medtech-simulation.xlsx"))
     html = build_html(os.path.join(here, "medtech-simulation.html"))
+    # index.html is an identical copy so GitHub Pages serves the app at the site root.
+    index = build_html(os.path.join(here, "index.html"))
     print("Built:")
     print("  ", xlsx)
     print("  ", html)
+    print("  ", index)
